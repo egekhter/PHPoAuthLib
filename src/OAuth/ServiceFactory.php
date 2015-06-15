@@ -117,7 +117,7 @@ class ServiceFactory
             $fullyQualifiedServiceName = $this->getFullyQualifiedServiceName($serviceName, $version);
 
             if ($oauthVersion) {
-                if ("OAuth" + $oauthVersion == $version)
+                if ("OAuth" . $oauthVersion == $version)
                 {
                     if (class_exists($fullyQualifiedServiceName)) {
                         return $this->$buildMethod($fullyQualifiedServiceName, $credentials, $storage, $scopes, $baseApiUri);
